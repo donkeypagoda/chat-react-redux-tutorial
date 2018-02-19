@@ -1,11 +1,11 @@
 const WebSocket = require('ws')
 
-const wss = WebSocket.Server({ port: 8989 })
+const wss = new WebSocket.Server({ port: 8989 })
 
 const users = []
 
 const broadcast = (data, ws) => {
-  wss.client.forEach((client) => {
+  wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN && client !== ws) {
       client.send(JSON.stringify(data))
     }
