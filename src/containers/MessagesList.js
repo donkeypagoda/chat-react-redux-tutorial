@@ -3,6 +3,6 @@ import MessagesListComponent from '../components/MessagesList'
 
 
 
-export const MessagesListComponent = connect(state => ({
+export const MessagesList = connect(state => ({
   messages: state.messages
 }), {})(MessagesListComponent)
