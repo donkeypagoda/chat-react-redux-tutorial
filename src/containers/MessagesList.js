@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const MessagesList = ({ messages }) => {
+const MessagesList = ({ messages }) => (
   <section id="messages-list">
     <ul>
         {messages.map(message => (
@@ -12,7 +12,7 @@ const MessagesList = ({ messages }) => {
         ))}
     </ul>
   </section>
-}
+)
 
 MessagesList.PropTypes = {
   messages: PropTypes.arrayOf(
