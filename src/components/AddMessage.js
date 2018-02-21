@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 const AddMessage = (props) => {
   let input
+  let name
 
   return (
     <section id="new-message">
@@ -21,13 +22,13 @@ const AddMessage = (props) => {
       <label>Your name?
         <input onKeyPress={(e) => {
             if (e.key === "Enter") {
-              props.dispatch(input.value, 'username')
-              input.value = ""
+              props.dispatch(name.value, 'username')
+              name.value = ""
             }
         }}
         type="text"
         ref ={(node) =>{
-          input = node
+          name = node
         }}></input>
       </label>
     </section>
