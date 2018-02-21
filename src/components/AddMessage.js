@@ -6,16 +6,30 @@ const AddMessage = (props) => {
 
   return (
     <section id="new-message">
-      <input onKeyPress={(e) => {
-          if (e.key === "Enter") {
-            props.dispatch(input.value, 'Me')
-            input.value = ""
-          }
-      }}
-      type="text"
-      ref ={(node) =>{
-        input = node
-      }}></input>
+      <label>Whats on your mind?
+        <input onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              props.dispatch(input.value, 'Me')
+              input.value = ""
+            }
+        }}
+        type="text"
+        ref ={(node) =>{
+          input = node
+        }}></input>
+      </label>
+      <label>Your name?
+        <input onKeyPress={(e) => {
+            if (e.key === "Enter") {
+              props.dispatch(input.value, 'username')
+              input.value = ""
+            }
+        }}
+        type="text"
+        ref ={(node) =>{
+          input = node
+        }}></input>
+      </label>
     </section>
   )
 }
