@@ -10,6 +10,7 @@ class App extends Component {
     return (
       <div id="container">
         <Sidebar />
+        <AddUser />
           <section>
             <MessagesList />
             <AddMessage />

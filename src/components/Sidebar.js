@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { AddUser } from "../containers/AddUser"
 
 const Sidebar = ({ users }) => (
   <aside id="sidebar" className="sidebar">
@@ -9,7 +8,6 @@ const Sidebar = ({ users }) => (
         <li key={user.id}>{user.name}</li>
       ))}
     </ul>
-    <AddUser />
   </aside>
 )
 
